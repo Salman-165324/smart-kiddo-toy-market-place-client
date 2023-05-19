@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDYxbfVTOCT8BOEuyxC9UfSMWpuLP8zjIY",
-  authDomain: "smart-kido-toy-market-place.firebaseapp.com",
-  projectId: "smart-kido-toy-market-place",
-  storageBucket: "smart-kido-toy-market-place.appspot.com",
-  messagingSenderId: "111763683245",
-  appId: "1:111763683245:web:9c672bb7b3ac0a8483d324"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
