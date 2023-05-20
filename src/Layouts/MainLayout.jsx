@@ -4,9 +4,9 @@ import Footer from "../Components/Shared/Footer";
 
 const MainLayout = () => {
     return (
-        <div className = 'my-container'>
+        <div className = 'bg-neutral1 min-h-screen'>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <Outlet className =''></Outlet>
             <Footer></Footer>
         </div>
     );
