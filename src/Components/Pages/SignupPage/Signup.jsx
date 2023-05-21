@@ -8,7 +8,7 @@ import { AuthContext } from '../../../Providers/AuthProviders';
 
 const Signup = () => {
 
-    const { googleSigning } = useContext(AuthContext);
+    const { googleSigning, signUpWithEmailAndPass } = useContext(AuthContext);
 
     const [errorText, setErrorText] = useState('');
 
@@ -25,7 +25,7 @@ const Signup = () => {
 
         // password validation 
 
-        if(password.length <= 8){
+        if (password.length <= 8) {
 
             setErrorText('Password is not at least 8 characters long')
             return;
@@ -37,16 +37,38 @@ const Signup = () => {
             return;
         }
 
-        else if (!/[!@#$%^&*()_+-={}|;:'",.<>?]/.test(password)) {
+        else if (!/[!#?@$%^&*-]/.test(password)) {
 
             setErrorText('Password does not contain at least one special character')
             return;
         }
 
-        else{
+        else {
             setErrorText('');
-            return;
         }
+
+        // Signup with Email and Pass 
+        if (email, password) {
+
+            signUpWithEmailAndPass(email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    console.log(user)
+                    // ...
+                    setErrorText('');
+                })
+                .catch((error) => {
+                    
+                    const errorMessage = error.message;
+                    console.log(error)
+                    setErrorText(errorMessage)
+                    
+                    // ..
+                })
+
+        }
+
 
     }
 
@@ -57,9 +79,11 @@ const Signup = () => {
 
                 const user = result.user;
                 console.log(user)
+                setErrorText('')
             }).catch((error) => {
                 // Handle Errors here.
                 console.log(error);
+                setErrorText(error)
                 // ...
             });
     }
@@ -103,16 +127,20 @@ const Signup = () => {
                                 <div className="form-control mt-6">
                                     <button type='submit' className="primary-button">Signup</button>
                                 </div>
+                                {
+                                    errorText &&
+                                    <label className="label mt-1 underline text-base">
+                                        <p className="link link-hover font-semibold text-red-600">{errorText}</p>
+                                    </label>
+
+                                }
                             </form>
                             <div className="divider">OR</div>
                             <button onClick={handleGoogleSignIn} className='btn bg-neutral1 accent-text-color flex gap-2 w-full items-center justify-center px-4 py-2.5 border border-accent rounded-md hover:bg-[#f5f2d1]'>
                                 <FcGoogle style={{ color: 'red' }} className='text-2xl' />
                                 <p className='grow-0'>Continue with Google</p>
                             </button>
-                            {
-                                errorText && <button className="btn btn-outline btn-warning hover:bg-neutral1">{errorText}</button>
 
-                            }
                             <label className="label">
                                 <Link to='/login' className="label-text-alt link link-hover font-semibold text-blue-700">Already a member? Please Login</Link>
 

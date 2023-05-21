@@ -7,7 +7,7 @@ import { AuthContext } from '../../../Providers/AuthProviders';
 
 const Login = () => {
     const [errorText, setErrorText] = useState('');
-    const { googleSigning } = useContext(AuthContext);
+    const { googleSigning, signWithEmailAndPass } = useContext(AuthContext);
 
 
     const handleFormSubmission = e =>{
@@ -16,6 +16,23 @@ const Login = () => {
         const form = e.target; 
         const email = form.email.value; 
         const password = form.password.value;
+
+        if( email && password){
+
+            signWithEmailAndPass(email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                console.log(user);
+                setErrorText(''); 
+                // ...
+              })
+              .catch((error) => {
+                const errorMessage = error.message;
+                console.log(error)
+                setErrorText(errorMessage); 
+              });
+        }
 
     }
 
@@ -60,6 +77,13 @@ const Login = () => {
                                 <div className="form-control mt-6">
                                     <button type='submit' className="primary-button">Login</button>
                                 </div>
+                                {
+                                    errorText &&
+                                    <label className="label mt-1 underline text-base">
+                                        <p className="link link-hover font-semibold text-red-600">{errorText}</p>
+                                    </label>
+
+                                }
                             </form>
 
                             {/* Google signing */}
@@ -68,10 +92,6 @@ const Login = () => {
                                 <FcGoogle style={{ color: 'red' }} className='text-2xl' />
                                 <p className='grow-0'>Continue with Google</p>
                             </button>
-                            {
-                                errorText && <button className="btn btn-outline btn-warning hover:bg-neutral1">{errorText}</button>
-
-                            }
                             
                             <label className="label">
                                 <Link to='/signup' className="label-text-alt link link-hover font-semibold text-blue-700">New to our site? Please Signup</Link>
