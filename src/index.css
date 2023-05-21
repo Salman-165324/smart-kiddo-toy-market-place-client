@@ -14,3 +14,7 @@
 .accent-text-color{
     @apply text-[#272253]
 }
+
+.primary-button{
+    @apply btn btn-primary hover:bg-[#a83b39] hover:border-[#d9b03d] border-[#c15352] bg-accent text-neutral1
+}

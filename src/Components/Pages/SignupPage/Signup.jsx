@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import signupAnimation from '../../../assets/signupAnimation.json';
 import Lottie from "lottie-react";
+import { Link } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
+
 
 const Signup = () => {
+
+    const [errorText, setErrorText] = useState('');
+
+
 
     return (
         <div className='primary-container'>
@@ -14,24 +21,33 @@ const Signup = () => {
                     </div>
                     <div className="card flex-shrink-0 bg-neutral1 w-full max-w-sm shadow-2xl mb-10 lg:mb-0 ">
                         <div className="card-body">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input type="text " placeholder="email" className="input bg-neutral1 input-bordered border-[#272253]" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input type="text" placeholder="password" className="input bg-neutral1 input-bordered border-[#272253]" />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary hover:bg-[#a83b39] hover:border-[#d9b03d] border-[#c15352] bg-accent text-neutral1">Login</button>
-                            </div>
+                            <form >
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Email</span>
+                                    </label>
+                                    <input type="email " placeholder="email" name="email" className="input bg-neutral1 input-bordered border-[#272253]" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Password</span>
+                                    </label>
+                                    <input name='password' type="password" placeholder="password" className="input bg-neutral1 input-bordered border-[#272253]" />
+
+                                </div>
+                                <div className="form-control mt-6">
+                                    <button className="primary-button">Login</button>
+                                </div>
+                                <div className="divider">OR</div>
+                                <div className='flex gap-2 items-center justify-center px-4 py-2.5 border border-accent rounded-md'>
+                                    <FcGoogle style={{ color: 'red' }} className='text-2xl' />
+                                    <p className='grow-0'>Continue with Google</p>
+                                </div>
+                            </form>
+                            <label className="label">
+                                <Link href="#" className="label-text-alt link link-hover font-semibold text-blue-700">Already a member? Please Login</Link>
+                               
+                            </label>
                         </div>
                     </div>
                 </div>
