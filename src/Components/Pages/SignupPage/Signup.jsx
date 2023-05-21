@@ -104,7 +104,7 @@ const Signup = () => {
         <div className='primary-container'>
             <div className=" bg-primary rounded-2xl flex flex-col items-center">
                 <h1 className='pt-12 pb-4 text-center text-4xl font-bold accent-text-color'>Welcome, Signup Please!</h1>
-                <div className="hero-content mx-auto flex-col xl:flex-row-reverse gap-14 sm:gap-10 items-center justify-center px-4 ">
+                <div className="hero-content px-0 mx-auto flex-col xl:flex-row-reverse gap-14 sm:gap-10 items-center justify-center sm:px-4 ">
                     <div className="text-center lg:text-left">
                         <Lottie className='sm:h-[500px] w-[400px]' animationData={signupAnimation} />
                     </div>
