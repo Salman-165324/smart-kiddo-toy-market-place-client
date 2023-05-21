@@ -9,7 +9,12 @@ const Signup = () => {
 
     const [errorText, setErrorText] = useState('');
 
-
+    const handleFormSubmission = e =>{
+        e.preventDefault(); 
+        const form = e.target; 
+        const email = form.email.value; 
+        const password = form.password.value; 
+    }
 
     return (
         <div className='primary-container'>
@@ -21,31 +26,31 @@ const Signup = () => {
                     </div>
                     <div className="card flex-shrink-0 bg-neutral1 w-full max-w-sm shadow-2xl mb-10 lg:mb-0 ">
                         <div className="card-body">
-                            <form >
+                            <form onSubmit={handleFormSubmission}>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email " placeholder="email" name="email" className="input bg-neutral1 input-bordered border-[#272253]" />
+                                    <input type="email " required placeholder="email" name="email" className="input bg-neutral1 input-bordered border-[#272253]" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input name='password' type="password" placeholder="password" className="input bg-neutral1 input-bordered border-[#272253]" />
+                                    <input required name='password' type="password" placeholder="password" className="input bg-neutral1 input-bordered border-[#272253]" />
 
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="primary-button">Login</button>
+                                    <button type='submit' className="primary-button">Signup</button>
                                 </div>
                                 <div className="divider">OR</div>
-                                <div className='flex gap-2 items-center justify-center px-4 py-2.5 border border-accent rounded-md'>
+                                <button className='btn bg-neutral1 accent-text-color flex gap-2 w-full items-center justify-center px-4 py-2.5 border border-accent rounded-md hover:bg-[#f5f2d1]'>
                                     <FcGoogle style={{ color: 'red' }} className='text-2xl' />
                                     <p className='grow-0'>Continue with Google</p>
-                                </div>
+                                </button>
                             </form>
                             <label className="label">
-                                <Link href="#" className="label-text-alt link link-hover font-semibold text-blue-700">Already a member? Please Login</Link>
+                                <Link to='/login' className="label-text-alt link link-hover font-semibold text-blue-700">Already a member? Please Login</Link>
                                
                             </label>
                         </div>

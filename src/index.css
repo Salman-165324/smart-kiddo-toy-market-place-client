@@ -16,5 +16,5 @@
 }
 
 .primary-button{
-    @apply btn btn-primary hover:bg-[#a83b39] hover:border-[#d9b03d] border-[#c15352] bg-accent text-neutral1
+    @apply btn btn-primary hover:bg-[#a83b39] hover:border-[#a83b39] border-[#c15352] bg-accent text-neutral1
 }
