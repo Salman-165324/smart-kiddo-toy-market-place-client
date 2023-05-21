@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import { IoReorderFourSharp } from 'react-icons/io5';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Navbar = () => {
-
+    const {user} = useContext(AuthContext);
+    console.log(user);
     const navItems =
         <>
 
