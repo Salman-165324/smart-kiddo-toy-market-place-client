@@ -8,7 +8,7 @@ import { AuthContext } from '../../../Providers/AuthProviders';
 
 const Signup = () => {
 
-    const { googleSigning, signUpWithEmailAndPass } = useContext(AuthContext);
+    const { googleSigning, signUpWithEmailAndPass, addNameAndProfilePic } = useContext(AuthContext);
 
     const [errorText, setErrorText] = useState('');
 
@@ -57,13 +57,25 @@ const Signup = () => {
                     console.log(user)
                     // ...
                     setErrorText('');
+
+                    if (name || photoURL) {
+
+                        addNameAndProfilePic(name, photoURL)
+                            .then(() => {
+                                console.log("Profile Updated")
+                            }).catch((error) => {
+                                
+                                console.log(error)
+                                setErrorText(error);
+                            });
+                    }
                 })
                 .catch((error) => {
-                    
+
                     const errorMessage = error.message;
                     console.log(error)
                     setErrorText(errorMessage)
-                    
+
                     // ..
                 })
 
