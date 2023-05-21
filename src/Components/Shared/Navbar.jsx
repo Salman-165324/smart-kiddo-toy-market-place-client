@@ -57,7 +57,7 @@ const Navbar = () => {
                                                 </div>
                                             </div>
                                         }
-                                        <button onClick={handleLogout} className="btn btn-outline border-primary border-2 !text-neutral1 font-semibold !hover:bg-[#a03534] mr-3 btn-sm">Logout</button>
+                                        <button onClick={handleLogout} className="btn btn-outline  !text-neutral1 font-semibold !hover:bg-[#a03534] mr-3 btn-sm">Logout</button>
                                     </div> :
                                     <div>
                                         <button className='btn btn-warning bg-primary mr-3 btn-sm'>
@@ -90,7 +90,7 @@ const Navbar = () => {
                             <>
                                 {user?.photoURL ?
                                     <div className="avatar mr-4 tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                        <div className="w-[36px] rounded-full border-2
+                                        <div className="w-[36px] rounded-full border-[3px]
                                     border-primary">
                                             <img src={user?.photoURL} alt="User Profile Image" />
                                         </div>
@@ -101,7 +101,7 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 }
-                                <button onClick={handleLogout} className="btn btn-outline border-primary border-2 !text-neutral1 font-semibold !hover:bg-[#a03534] mr-3 btn-sm	">Logout</button>
+                                <button onClick={handleLogout} className="btn btn-outline  !text-neutral1 font-semibold !hover:bg-[#a03534] mr-3 btn-sm	">Logout</button>
                             </> :
                             <div>
                                 <button className='btn btn-warning bg-primary mr-3 btn-sm'>
