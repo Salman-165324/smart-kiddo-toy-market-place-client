@@ -7,7 +7,7 @@ const ShoppingByCategory = () => {
 
     return (
         <div className='primary-container'>
-            <h2 className='text-center font-semibold text-3xl md:text-5xl'>Shop by Category</h2>
+            <h2 className='section-title'>Shop by Category</h2>
             <Tabs>
                 <TabList>
                     <div className="mt-8 inline-flex px-1">

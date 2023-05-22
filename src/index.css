@@ -18,3 +18,7 @@
 .primary-button{
     @apply btn btn-primary hover:bg-[#a83b39] hover:border-[#a83b39] border-[#c15352] bg-accent text-neutral1
 }
+
+.section-title{
+    @apply text-center font-semibold text-3xl md:text-5xl
+}
