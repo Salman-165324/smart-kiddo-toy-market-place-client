@@ -1,25 +1,37 @@
 import React, { useEffect, useState } from 'react';
+import ShoppingCard from './ShoppingCard';
 
-const ShoppingCardBlock = ({category}) => {
+const ShoppingCardBlock = ({ category }) => {
 
 
 
-    const [product, setProduct] = useState([]); 
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
 
         fetch(`http://localhost:5000/searchByCategory?category=${category}`)
-            .then( res => res.json())
-            .then( data => setProduct(data))
+            .then(res => res.json())
+            .then(data => setProducts(data))
 
     }, [category])
 
-    
-    console.log(product)
+
+    console.log(products)
 
     return (
         <div>
-            <h1>{category}</h1>
+
+            <div className='mt-8 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6'>
+                {
+                    products.map(product => <ShoppingCard
+                        key={product._id}
+                        product = {product}
+                    >
+
+                    </ShoppingCard>)
+                }
+            </div>
+
         </div>
     );
 };

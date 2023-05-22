@@ -1,14 +1,26 @@
 import React from 'react';
+import { Rating } from '@smastrom/react-rating'
 
-const ShoppingCard = () => {
+const ShoppingCard = ({ product }) => {
+    const { available_quantity, category, detail_description, name, picture_url, price, rating, seller, seller_email, _id } = product
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+        <div className="card w-96 bg-primary shadow-xl">
+            <figure><img src={picture_url} alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <Rating
+                    style={{ maxWidth: 140 }}
+                    value={rating}
+                    readOnly
+                />
+                <h2 className="mt-4 card-title">{name}</h2>
+
+                <p className='text-lg'>
+                    <span className='font-semibold mr-1'>Price:</span>
+                    {`$${price}`}
+                </p>
+
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="primary-button">View Details</button>
                 </div>
             </div>
         </div>

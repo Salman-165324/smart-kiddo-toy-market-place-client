@@ -4,7 +4,7 @@ import ShoppingCard from './ShoppingCard';
 import ShoppingCardBlock from './ShoppingCardBlock';
 
 const ShoppingByCategory = () => {
-    
+
     return (
         <div className='primary-container'>
             <h2 className='text-center font-semibold text-3xl md:text-5xl'>Shop by Category</h2>
@@ -32,15 +32,15 @@ const ShoppingByCategory = () => {
 
 
                 </TabList>
-                 
+
                 <TabPanel>
                     <ShoppingCardBlock category='Language Toys'></ShoppingCardBlock>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Math Toys</h2>
+                    <ShoppingCardBlock category='Math Toys'></ShoppingCardBlock>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Engineering Toys</h2>
+                    <ShoppingCardBlock category='Engineering Toys'></ShoppingCardBlock>
                 </TabPanel>
             </Tabs>
         </div>
