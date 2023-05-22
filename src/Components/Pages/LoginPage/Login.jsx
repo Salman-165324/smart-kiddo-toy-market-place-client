@@ -1,16 +1,21 @@
 import React, { useContext, useState } from 'react';
 import signupAnimation from '../../../assets/signupAnimation.json';
 import Lottie from "lottie-react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../../Providers/AuthProviders';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [errorText, setErrorText] = useState('');
     const { googleSigning, signWithEmailAndPass } = useContext(AuthContext);
+    const location = useLocation(); 
 
+    const from = location.state?.from?.pathname || '/'; 
+    const navigate = useNavigate(); 
 
     const handleFormSubmission = e =>{
+
         setErrorText('')
         e.preventDefault(); 
         const form = e.target; 
@@ -25,6 +30,7 @@ const Login = () => {
                 const user = userCredential.user;
                 console.log(user);
                 setErrorText(''); 
+                navigate(from, {replace:true});
                 // ...
               })
               .catch((error) => {
@@ -43,6 +49,7 @@ const Login = () => {
       
             const user = result.user;
             console.log(user)
+            navigate(from, {replace:true});
         }).catch((error) => {
             // Handle Errors here.
             console.log(error);

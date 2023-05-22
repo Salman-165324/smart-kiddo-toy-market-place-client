@@ -12,6 +12,7 @@ import Blog from "../Components/Pages/BlogPage/Blog";
 import Login from "../Components/Pages/LoginPage/Login";
 import Signup from "../Components/Pages/SignupPage/Signup";
 import ToyDetail from "../Components/Pages/ToyDetailsPage/ToyDetail";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
           element: <Signup></Signup>
         }, {
           path: 'toyDetails/:id',
-          element: <ToyDetail></ToyDetail>, 
+          element: <PrivateRoute><ToyDetail></ToyDetail></PrivateRoute>, 
           loader: ({params}) => fetch(`http://localhost:5000/toyDetails/${params.id}`)
         }
       ]

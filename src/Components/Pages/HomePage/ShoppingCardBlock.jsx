@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ShoppingCard from './ShoppingCard';
+import { toast } from 'react-toastify';
 
 const ShoppingCardBlock = ({ category }) => {
 
@@ -11,7 +12,10 @@ const ShoppingCardBlock = ({ category }) => {
 
         fetch(`http://localhost:5000/searchByCategory?category=${category}`)
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => {
+ 
+                setProducts(data)
+            })
 
     }, [category])
 
