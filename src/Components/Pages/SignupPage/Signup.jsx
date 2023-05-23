@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import signupAnimation from '../../../assets/signupAnimation.json';
 import Lottie from "lottie-react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../../Providers/AuthProviders';
 
@@ -9,6 +9,9 @@ import { AuthContext } from '../../../Providers/AuthProviders';
 const Signup = () => {
 
     const { googleSigning, signUpWithEmailAndPass, addNameAndProfilePic } = useContext(AuthContext);
+
+    const navigate = useNavigate(); 
+
 
     const [errorText, setErrorText] = useState('');
 
@@ -69,6 +72,8 @@ const Signup = () => {
                                 setErrorText(error);
                             });
                     }
+
+                    navigate('/'); 
                 })
                 .catch((error) => {
 
@@ -92,6 +97,7 @@ const Signup = () => {
                 const user = result.user;
                 console.log(user)
                 setErrorText('')
+                navigate('/')
             }).catch((error) => {
                 // Handle Errors here.
                 console.log(error);
