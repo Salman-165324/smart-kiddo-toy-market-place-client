@@ -23,7 +23,7 @@ const Footer = () => {
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
                             <h2 className="title-font font-medium text-gray-900 tracking-widest mb-3">ADDRESS</h2>
                             <nav className="list-none mb-10">
-                                <p className="mt-5 text-sm text-gray-500">123 ABC Street, City, Country</p>
+                                <p className="mt-5 text-sm text-gray-500">123 BC Street, Dublin, Ireland</p>
                                 <p className="mt-2 text-sm text-gray-500">Phone: 123-456-7890</p>
                                 <p className="mt-2 text-sm text-gray-500">Email: info@smartkiddo.com</p>
                             </nav>

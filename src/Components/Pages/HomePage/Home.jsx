@@ -1,5 +1,8 @@
+import ContactUs from "./ContactUs";
+import Gallery from "./Gallery";
 import Hero from "./Hero";
 import ShoppingByCategory from "./ShoppingByCategory";
+import Testimonial from "./Testimonial";
 
 
 const Home = () => {
@@ -7,6 +10,9 @@ const Home = () => {
         <div>
             <Hero></Hero>
             <ShoppingByCategory></ShoppingByCategory>
+            <Gallery></Gallery>
+            <Testimonial></Testimonial>
+            <ContactUs></ContactUs>
         </div>
     );
 };
