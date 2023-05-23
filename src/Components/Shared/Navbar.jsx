@@ -23,8 +23,13 @@ const Navbar = () => {
 
             <Link className=' hover:text-primary' to="/">Home</Link>
             <Link className=' hover:text-primary' to="/all-toys">All Toys</Link>
-            <Link className=' hover:text-primary' to="/my-toys">My Toys</Link>
-            <Link className=' hover:text-primary' to="/add-toys">Add A Toy</Link>
+            {
+                user && 
+                <>
+                    <Link className=' hover:text-primary' to="/my-toys">My Toys</Link>
+                    <Link className=' hover:text-primary' to="/add-toys">Add A Toy</Link>
+                </>
+            }
             <Link className=' hover:text-primary' to="/blog">Blog</Link>
             <Link></Link>
 
