@@ -11,6 +11,27 @@ const MyToys = () => {
     const { user } = useContext(AuthContext);
     const userEmail = user?.email;
 
+    const handleDescendingPrice = () => {
+
+        fetch(`http://localhost:5000/sortPriceInDescendingOrder?email=${userEmail}`)
+            .then(res => res.json())
+            .then( data => {
+
+                setProducts(data); 
+                console.log(data); 
+            })
+    }
+
+    const handleAscendingPrice = () => {
+
+        fetch(`http://localhost:5000/sortPriceInAscendingOrder?email=${userEmail}`)
+            .then(res => res.json())
+            .then( data => {
+
+                setProducts(data); 
+                console.log(data); 
+            })
+    }
 
 
     const handleDelete = id => {
@@ -65,6 +86,13 @@ const MyToys = () => {
     console.log(products);
     return (
         <div className='primary-container'>
+            <div className="dropdown">
+                <label tabIndex={0} className=" m-1 primary-button">Sort By Price</label>
+                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li onClick={handleDescendingPrice}><a>Hight to Low</a></li>
+                    <li onClick={handleAscendingPrice}><a>Low to High</a></li>
+                </ul>
+            </div>
             <div className='mt-10'>
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
