@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MyToyTableRow = ({product}) => {
+const MyToyTableRow = ({product, handleDelete}) => {
 
     const { available_quantity, category, detail_description, name, picture_url, price, rating, seller, seller_email, _id } = product 
     return (
@@ -33,7 +33,7 @@ const MyToyTableRow = ({product}) => {
                 </Link>
             </td>
             <td>
-                <button className='primary-button !btn-sm'>Delete</button>
+                <button onClick={() => handleDelete(_id)} className='primary-button !btn-sm'>Delete</button>
             </td>
 
         </tr>
