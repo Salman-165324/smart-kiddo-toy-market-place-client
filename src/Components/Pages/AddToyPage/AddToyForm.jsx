@@ -2,30 +2,30 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const AddToyForm = () => {
-    const [pictureURL, setPictureURL] = useState('');
+    const [picture_url, setPictureURL] = useState('');
     const [name, setName] = useState('');
-    const [sellerName, setSellerName] = useState('');
-    const [sellerEmail, setSellerEmail] = useState('');
+    const [seller, setSellerName] = useState('');
+    const [seller_email, setSellerEmail] = useState('');
     const [category, setCategory] = useState('');
     const [price, setPrice] = useState('');
     const [rating, setRating] = useState('');
-    const [quantity, setQuantity] = useState('');
-    const [description, setDescription] = useState('');
+    const [available_quantity, setQuantity] = useState('');
+    const [detail_description, setDescription] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         // Read the form data
         const toyData = {
-            pictureURL,
+            picture_url,
             name,
-            sellerName,
-            sellerEmail,
+            seller,
+            seller_email,
             category,
             price,
             rating,
-            quantity,
-            description,
+            available_quantity,
+            detail_description,
         };
 
      
@@ -59,7 +59,7 @@ const AddToyForm = () => {
                         <label className="block mb-2 font-semibold">Picture URL:</label>
                         <input
                             type="text"
-                            value={pictureURL}
+                            value={picture_url}
                             onChange={(e) => setPictureURL(e.target.value)}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md text-base font-normal focus:ring-indigo-500 focus:border-indigo-500"
                         />
@@ -79,7 +79,7 @@ const AddToyForm = () => {
                         <label className="block mb-2 font-semibold">Seller Name:</label>
                         <input
                             type="text"
-                            value={sellerName}
+                            value={seller}
                             onChange={(e) => setSellerName(e.target.value)}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md text-base font-normal focus:ring-indigo-500 focus:border-indigo-500"
                         />
@@ -89,7 +89,7 @@ const AddToyForm = () => {
                         <label className="block mb-2 font-semibold">Seller Email:</label>
                         <input
                             type="email"
-                            value={sellerEmail}
+                            value={seller_email}
                             onChange={(e) => setSellerEmail(e.target.value)}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md text-base font-normal focus:ring-indigo-500 focus:border-indigo-500"
                         />
@@ -139,7 +139,7 @@ const AddToyForm = () => {
                         <label className="block mb-2 font-semibold">Available Quantity:</label>
                         <input
                             type="number"
-                            value={quantity}
+                            value={available_quantity}
                             onChange={(e) => setQuantity(e.target.value)}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md text-base font-normal focus:ring-indigo-500 focus:border-indigo-500"
                         />
@@ -151,7 +151,7 @@ const AddToyForm = () => {
                 <div className="mb-6 w-full ">
                         <label className="block mb-2 font-semibold">Detail Description:</label>
                         <textarea
-                            value={description}
+                            value={detail_description}
                             onChange={(e) => setDescription(e.target.value)}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md text-base font-normal focus:ring-indigo-500 focus:border-indigo-500"
                         ></textarea>
