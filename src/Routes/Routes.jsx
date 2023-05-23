@@ -7,12 +7,12 @@ import Error from "../Components/Pages/ErrorPage/Error";
 import Home from "../Components/Pages/HomePage/Home";
 import AllToys from "../Components/Pages/AllToysPage/AllToys";
 import MyToys from "../Components/Pages/MyToysPage/MyToys";
-import AddToy from "../Components/Pages/AddToyPage/AddToy";
 import Blog from "../Components/Pages/BlogPage/Blog";
 import Login from "../Components/Pages/LoginPage/Login";
 import Signup from "../Components/Pages/SignupPage/Signup";
 import ToyDetail from "../Components/Pages/ToyDetailsPage/ToyDetail";
 import PrivateRoute from "./PrivateRoute";
+import AddToyForm from "../Components/Pages/AddToyPage/AddToyForm";
 
 const router = createBrowserRouter([
     {
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         },
         {
           path: 'add-toys', 
-          element: <AddToy />
+          element: <AddToyForm></AddToyForm>
         },
         {
           path: '/blog', 
