@@ -10,7 +10,7 @@ const AllToys = () => {
 
     const handleSearch = () => {
 
-        fetch(`http://localhost:5000/toysBySearch?inputText=${inputValue}`)
+        fetch(`https://server-side-toy-marketplace.vercel.app/toysBySearch?inputText=${inputValue}`)
             .then(res => res.json())
             .then(data => {
 
@@ -20,7 +20,7 @@ const AllToys = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/toys')
+        fetch('https://server-side-toy-marketplace.vercel.app/toys')
             .then(res => res.json())
             .then(data => setProducts(data))
 

@@ -10,7 +10,7 @@ const ShoppingCardBlock = ({ category }) => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/searchByCategory?category=${category}`)
+        fetch(`https://server-side-toy-marketplace.vercel.app/searchByCategory?category=${category}`)
             .then(res => res.json())
             .then(data => {
  

@@ -23,7 +23,7 @@ const UpdateToy = () => {
 
         console.log(toyData);
 
-        fetch('http://localhost:5000/updateToy', {
+        fetch('https://server-side-toy-marketplace.vercel.app/updateToy', {
             method: "PATCH",
             headers: {
                 'content-type': 'application/json',

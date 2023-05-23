@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         }, {
           path: 'toyDetails/:id',
           element: <PrivateRoute><ToyDetail></ToyDetail></PrivateRoute>, 
-          loader: ({params}) => fetch(`http://localhost:5000/toyDetails/${params.id}`)
+          loader: ({params}) => fetch(`https://server-side-toy-marketplace.vercel.app/toyDetails/${params.id}`)
         }, 
         {
           path: 'updateToy/:id', 
