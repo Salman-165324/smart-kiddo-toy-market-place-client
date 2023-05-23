@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const AddToyForm = () => {
     const [pictureURL, setPictureURL] = useState('');
@@ -15,7 +16,7 @@ const AddToyForm = () => {
         event.preventDefault();
 
         // Read the form data
-        const formData = {
+        const toyData = {
             pictureURL,
             name,
             sellerName,
@@ -27,8 +28,25 @@ const AddToyForm = () => {
             description,
         };
 
-        // Do something with the form data (e.g., send it to the server)
-        console.log(formData);
+     
+        console.log(toyData);
+        
+        fetch('http://localhost:5000/addToys', {
+            method: "POST", 
+            headers: {
+                'content-type' : 'application/json', 
+            }, 
+            body: JSON.stringify(toyData)
+        })
+        .then( res => res.json())
+        .then( data => {
+            console.log(data);
+            if (data.acknowledged){
+
+                toast.success('Your Data has been successfully Added');
+            }
+        })
+
     };
 
     return (
