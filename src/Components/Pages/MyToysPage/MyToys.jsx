@@ -4,13 +4,14 @@ import MyToyTableRow from './MyToyTableRow';
 import { data } from 'autoprefixer';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2'
+import useTitle from '../../../Hooks/useTitle';
 
 
 const MyToys = () => {
     const [products, setProducts] = useState([]);
     const { user } = useContext(AuthContext);
     const userEmail = user?.email;
-
+    useTitle('My Toys');
     const handleDescendingPrice = () => {
 
         fetch(`https://server-side-toy-marketplace.vercel.app/sortPriceInDescendingOrder?email=${userEmail}`)

@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../../Providers/AuthProviders';
 import { toast } from 'react-toastify';
+import useTitle from '../../../Hooks/useTitle';
 
 const Login = () => {
     const [errorText, setErrorText] = useState('');
@@ -14,6 +15,7 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/'; 
     const navigate = useNavigate(); 
 
+    useTitle('Login');
     const handleFormSubmission = e =>{
 
         setErrorText('')

@@ -1,8 +1,11 @@
 import { Rating } from '@smastrom/react-rating';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 
 const ToyDetail = () => {
+
+    useTitle('Toy Details');
     const product = useLoaderData();
     const { available_quantity, category, detail_description, name, picture_url, price, rating, seller, seller_email, _id } = product
 

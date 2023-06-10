@@ -2,9 +2,9 @@ import React from 'react';
 
 const Testimonial = () => {
     return (
-        <div>
+        <div className='primary-container'>
             <div className="text-gray-600 body-font">
-                <div className="container px-5 py-24 mx-auto">
+                <div className="container px-5 mx-auto">
                     <h1 className="section-title text-gray-700 mb-12 text-center">Testimonials</h1>
                     <div className="flex flex-wrap -m-4">
                         <div className="p-4 md:w-1/2 w-full">

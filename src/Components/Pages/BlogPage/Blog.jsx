@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from '../../../Hooks/useTitle';
 
 const Blog = () => {
+    useTitle('Blog');
     return (
         <div className='primary-container'>
             <h1 className='section-title'>Important Concepts</h1>
@@ -41,7 +43,75 @@ const Blog = () => {
                     </p>
                 </div>
             </div>
-
+            {/* Question 3 */}
+            <div>
+                <h2 className='mt-10 font-semibold text-2xl'>3. What is Express.js? What is Nest.js?</h2>
+                <div className='mt-5 p-2 space-y-5'>
+                    <p>
+                        {
+                            `Express.js and Nest.js both are framework for building server side web application and APIs. `
+                        }
+                    </p>
+                    <p>
+                        {
+                            `
+                            Compared to Nest.js, Express.js is a simple, lightweight and flexible Node.js framework. It is easy to set up and use. It provides a robust set of features for handling HTTP requests, routing, middleware, and rendering views. 
+                            Express.js is known for its unnopinionated approach which allows developers to have more control over the structure and components of their application. Express.js also has a large community of developers which makes it easy to find help and resources when needed. `
+                        }
+                    </p>
+                    <p>
+                        {
+                            `Nest.js is built on top of Express.js and provides an opinionated and more structured way of building applications with TypeScript. Nest.js uses modular architecture which makes it easy to maintain and scale applications as they grow. Nest.js comes with several built-in features such as authentication, caching and validation. This reduces the time required to build large applications.`
+                        }
+                    </p>
+                    <p>
+                        {
+                            `Compared to express.js nest.js is more complex which makes it difficult to learn and use, especially for beginners. Also because of its opinionated structure, it's difficult to deviate from the framework's defaults. For highly customizable applications nest.js may not be the best choice. Express.js on the other hand is more flexible and can be used to build a wider variety of applications. 
+`
+                        }
+                    </p>
+                </div>
+            </div>
+            {/* Question 4 */}
+            <div>
+                <h2 className='mt-10 font-semibold text-2xl'>What is MongoDB aggregate and how does it work ?</h2>
+                <div className='mt-5 p-2 space-y-5'>
+                    <p>
+                        {
+                            `MongoDb aggregate is a powerful way to process data in MongoDB. It allows us to group data together, run some operation to it and finally get the desired results.`
+                        }
+                    </p>
+                    <p>
+                        {
+                            `MongoDb aggregate works by using pipeline of multiple stages.Each stage of the document performs an operation on the data. For example in a stage we can filter, group documents and calculate values. The documents that are output from a stage are forwarded to the next stage.`
+                        }
+                    </p>
+                    <p>
+                        {
+                            `The following is an example of a mongoDB aggregate pipeline: `
+                        }
+                    </p>
+                    <pre className='bg-primary p-5 rounded-lg'>
+                        <code>
+                            {
+`db.collection.aggregate([
+  { "$match": { "age": { "$gt": 18 } } },
+  { "$group": {
+    "_id": "$city",
+    "count": { "$sum": 1 }
+  }}
+]) 
+                                `
+                            }
+                        </code>
+                    </pre>
+                    <p>
+                        {
+                            `The following is an example of a mongoDB aggregate pipeline: `
+                        }
+                    </p>
+                </div>
+            </div>
 
         </div>
     );

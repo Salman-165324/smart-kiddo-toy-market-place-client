@@ -1,12 +1,14 @@
 import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 import TableRow from './TableRow';
+import useTitle from '../../../Hooks/useTitle';
 
 const AllToys = () => {
 
     const [products, setProducts] = useState([]);
     const [inputValue, setInputValue] = useState('');
 
+    useTitle('All Toys');
 
     const handleSearch = () => {
 

@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import useTitle from '../../../Hooks/useTitle';
 
 const AddToyForm = () => {
+
+    useTitle('Add Toy');
+
     const [picture_url, setPictureURL] = useState('');
     const [name, setName] = useState('');
     const [seller, setSellerName] = useState('');

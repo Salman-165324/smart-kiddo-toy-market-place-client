@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const Gallery = () => {
+    useEffect(()=>{
+
+        Aos.init();
+
+    },[])
     return (
-        <div className='primary-container'>
+        <div className='primary-container' data-aos = 'flip-down'>
             <h1 className="mx-auto text-center section-title">Our Best Products Gallery</h1>
           
             <section className="text-gray-600 body-font">
-                <div className="container px-5 py-24 mx-auto flex flex-wrap">
+                <div className="container mt-16 px-5 mx-auto flex flex-wrap">
 
 
                     <div className="flex flex-wrap md:-m-2 -m-1">
