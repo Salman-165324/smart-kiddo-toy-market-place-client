@@ -18,24 +18,24 @@ const Gallery = () => {
 
                     <div className="flex flex-wrap md:-m-2 -m-1">
                         <div className="flex flex-wrap w-1/2">
-                            <div className="md:p-2 p-1 w-1/2">
+                            <div className="md:p-2 p-1 w-1/2 border-4 border-[#f0f388] ">
                                 <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.ibb.co/RPG2ZjF/rebote-Arm-Kit.jpg" />
                             </div>
-                            <div className="md:p-2 p-1 w-1/2">
+                            <div className="md:p-2 p-1 w-1/2 border-4 border-l-0 border-[#f0f388]">
                                 <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.ibb.co/FzT9f1Q/math-Box-Deluxe.jpg" />
                             </div>
-                            <div className="md:p-2 p-1 w-full">
+                            <div className="md:p-2 p-1 w-full border-4 border-t-0 border-[#f0f388]">
                                 <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://i.ibb.co/xmrc9X8/Language-Learning-Book.jpg" />
                             </div>
                         </div>
                         <div className="flex flex-wrap w-1/2">
-                            <div className="md:p-2 p-1 w-full">
+                            <div className="md:p-2 p-1 w-full border-4 border-l-0 border-[#f0f388]">
                                 <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://i.ibb.co/s3pSQd1/engineering-set.jpg" />
                             </div>
-                            <div className="md:p-2 p-1 w-1/2">
+                            <div className="md:p-2 p-1 w-1/2 border-4 border-[#f0f388] border-t-0 border-l-0">
                                 <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.ibb.co/Wpj771Z/alphabet-Blocks.jpg" />
                             </div>
-                            <div className="md:p-2 p-1 w-1/2">
+                            <div className="md:p-2 p-1 w-1/2 border-4 border-l-0 border-t-0 border-[#f0f388]">
                                 <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.ibb.co/ftQQDZ7/Engineering-Building-Blocks.jpg" />
                             </div>
                         </div>

@@ -13,11 +13,12 @@ const Hero = () => {
 
                 <div className='ml-6 bottom-[35vh] absolute z-20'>
                     {/* <Lottie className=' h-[600px] w-[500px] absolute -top-[30vh] -left-16 block' animationData={clouds} /> */}
-                    <h1 className="text-3xl  md:text-5xl font-bold text-primary ">Develop your kid <br /> with toys!</h1>
-                    <p className="py-6 w-4/6 md:w-1/2 font-semibold text-slate-700">{`Our kids are our future, but it seems like they don't care at all! Don't worry, though. They enjoy playing, right? If we give them the smart toys, they will grow just right, even while playing!`}</p>
+                    <h1 className="text-4xl hidden md:block  md:text-6xl tracking-widest font-bold text-[#121b44] uppercase">Develop your kids <br /> with toys!</h1>
+                    <h1 className="text-4xl md:hidden  md:text-6xl tracking-widest font-bold text-[#121b44] uppercase">Develop your kids with toys!</h1>
+                    <p className="py-6 w-4/6 md:w-1/2 md:text-xl font-semibold text-[#3e2f4d]">{`Our kids are our future, but it seems like they don't care at all! Don't worry, though. They enjoy playing, right? If we give them the smart toys, they will grow just right, even while playing!`}</p>
                     <button className="primary-button">Get Started</button>
                 </div>
-                <div className='absolute inset-0 bg-black opacity-10'></div>
+                {/* <div className='absolute inset-0 bg-black opacity-10'></div> */}
 
             </div>
 

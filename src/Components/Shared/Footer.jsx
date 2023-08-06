@@ -48,9 +48,9 @@ const Footer = () => {
                                         </li>
                                     </>
                                 }
-                                <li>
+                                {/* <li>
                                     <Link className="text-gray-600 hover:text-gray-800 " to="/blog">Blog</Link>
-                                </li>
+                                </li> */}
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">

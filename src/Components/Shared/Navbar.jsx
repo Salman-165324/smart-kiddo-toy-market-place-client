@@ -30,8 +30,8 @@ const Navbar = () => {
                     <Link className=' hover:text-primary' to="/add-toys">Add A Toy</Link>
                 </>
             }
-            <Link className=' hover:text-primary' to="/blog">Blog</Link>
-            <Link></Link>
+            {/* <Link className=' hover:text-primary' to="/blog">Blog</Link>
+            <Link></Link> */}
 
         </>
     return (
