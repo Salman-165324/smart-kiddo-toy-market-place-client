@@ -10,13 +10,13 @@ import Testimonial from "./Testimonial";
 const Home = () => {
     
     return (
-        <div>
+        <div className="overflow-hidden">
             <Hero></Hero>
             <ShoppingByCategory></ShoppingByCategory>
             <Gallery ></Gallery>
             <Testimonial></Testimonial>
             <ContactUs></ContactUs>
-            
+
         </div>
     );
 };
