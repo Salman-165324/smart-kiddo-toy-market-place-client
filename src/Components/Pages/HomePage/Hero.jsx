@@ -8,10 +8,10 @@ import Lottie from "lottie-react";
 const Hero = () => {
     return (
 
-        <div className='min-h-screen object-cover bg-right	bg-no-repeat relative' style={{ backgroundImage: `url(${heroBg})` }}>
-            <div className='secondary-container'>
+        <div className='min-h-screen object-cover bg-right	bg-no-repeat relative ' style={{ backgroundImage: `url(${heroBg})` }}>
+            <div className='secondary-container h-screen flex pt-2 lg:items-center'>
 
-                <div className='ml-6 bottom-[35vh] absolute z-20'>
+                <div className='ml-5 lg:ml-7 lg:px-4'>
                     {/* <Lottie className=' h-[600px] w-[500px] absolute -top-[30vh] -left-16 block' animationData={clouds} /> */}
                     <h1 className="text-4xl hidden md:block  md:text-6xl tracking-widest font-bold text-[#121b44] uppercase">Develop your kids <br /> with toys!</h1>
                     <h1 className="text-4xl md:hidden  md:text-6xl tracking-widest font-bold text-[#121b44] uppercase">Develop your kids with toys!</h1>
@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
 
             <div>
-                <img src={heroCharacter} className="overflow-hidden max-w-[440px] sm:max-w-lg md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl absolute bottom-0 -right-[22vh] md:-right-[15vh] xl:right-[8vh]" />
+                <img src={heroCharacter} className="overflow-hidden max-w-[440px]  sm:max-w-lg md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl absolute bottom-0 -right-[22vh] md:-right-[15vh] xl:right-[8vh] max-h-[95vh]" />
             </div>
         </div>
     );

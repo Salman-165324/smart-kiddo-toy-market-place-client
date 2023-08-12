@@ -35,7 +35,7 @@ const Navbar = () => {
 
         </>
     return (
-        <div className='bg-accent'>
+        <div className='bg-accent '>
             <div className="navbar secondary-container h-24 ">
                 <div className="navbar-start">
                     <div className="dropdown">
