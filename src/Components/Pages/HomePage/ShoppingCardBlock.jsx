@@ -1,26 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import ShoppingCard from './ShoppingCard';
 import { toast } from 'react-toastify';
+import useToyData from '../../../Hooks/useToyData';
 
 const ShoppingCardBlock = ({ category }) => {
 
 
 
-    const [products, setProducts] = useState([]);
+    // const [products, setProducts] = useState([]);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        fetch(`https://server-side-toy-marketplace.vercel.app/searchByCategory?category=${category}`)
-            .then(res => res.json())
-            .then(data => {
+    //     fetch(`https://server-side-toy-marketplace.vercel.app/searchByCategory?category=${category}`)
+    //         .then(res => res.json())
+    //         .then(data => {
  
-                setProducts(data)
-            })
+    //             setProducts(data)
+    //         })
 
-    }, [category])
+    // }, [category])
 
-
-    console.log(products)
+    const [toyData] = useToyData(category); 
+    const products = toyData; 
+    console.log(products); 
 
     return (
         <div>

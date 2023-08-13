@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="">
         <img
           src={heroCharacter}
-          className="max-w-[50vh]  sm:max-w-lg md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl absolute bottom-0 -right-[12vh] md:-right-[10vh] xl:right-[1vh] max-h-[60vh]"
+          className="max-w-[50vh]  sm:max-w-lg md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl absolute bottom-0 -right-[12vh] md:-right-[10vh] xl:-right-[3vh] max-h-[60vh] lg:max-h-[75vh] xl:max-h-[90vh]"
         />
       </div>
     </div>
