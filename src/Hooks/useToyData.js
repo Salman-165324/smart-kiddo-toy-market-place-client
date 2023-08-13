@@ -10,7 +10,7 @@ const useToyData = (category) =>{
         queryFn: async () =>{
             
             try{
-                const response = await axios.get(`https://server-side-toy-marketplace.vercel.app/searchByCategory?category=${category}`, {
+                const response = await axios.get(`https://toy-market-place-server-side.onrender.com/searchByCategory?category=${category}`, {
                     timeout: 10000,
                 }); 
                 const data = response.data; 

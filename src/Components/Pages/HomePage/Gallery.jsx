@@ -15,7 +15,6 @@ const Gallery = () => {
             <section className="text-gray-600 body-font">
                 <div className="container mt-16 px-5 mx-auto flex flex-wrap">
 
-
                     <div className="flex flex-wrap md:-m-2 -m-1">
                         <div className="flex flex-wrap w-1/2">
                             <div className="md:p-2 p-1 w-1/2 border-4 border-[#f0f388] ">
@@ -40,6 +39,7 @@ const Gallery = () => {
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </section>
 

@@ -11,7 +11,7 @@ const ShoppingCardBlock = ({ category }) => {
 
     // useEffect(() => {
 
-    //     fetch(`https://server-side-toy-marketplace.vercel.app/searchByCategory?category=${category}`)
+    //     fetch(`https://toy-market-place-server-side.onrender.com/searchByCategory?category=${category}`)
     //         .then(res => res.json())
     //         .then(data => {
  
